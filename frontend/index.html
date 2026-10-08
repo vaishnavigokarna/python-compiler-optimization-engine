@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Optimization Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Python Optimization Engine</h1>
+    <p>Analyze → Optimize → Benchmark</p>
+  </div>
+  <span id="status" class="status">Checking API...</span>
+</header>
+
+<main>
+  <section class="card">
+    <div class="section-title">
+      <h2>1. Python Source Code</h2>
+      <div>
+        <button id="sampleBtn" class="secondary">Load Sample</button>
+        <button id="analyzeBtn">Analyze Code</button>
+        <button id="optimizeBtn">Optimize Code</button>
+      </div>
+    </div>
+    <textarea id="code" spellcheck="false" placeholder="Paste Python code here..."></textarea>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>2. Analysis</h2>
+      <div id="analysis" class="results">No analysis yet.</div>
+    </div>
+    <div class="card">
+      <h2>3. Optimizations</h2>
+      <div id="optimizations" class="results">No optimization yet.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-title">
+      <h2>4. Original vs Optimized</h2>
+      <button id="benchmarkBtn" disabled>Run Benchmark</button>
+    </div>
+    <div class="code-grid">
+      <div>
+        <h3>Original</h3>
+        <pre id="originalCode"></pre>
+      </div>
+      <div>
+        <h3>Optimized</h3>
+        <pre id="optimizedCode"></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>5. Benchmark Results</h2>
+    <div id="benchmark" class="results">Run optimization and then benchmark.</div>
+    <div class="bars">
+      <div><span>Original</span><div class="bar"><i id="barOriginal"></i></div></div>
+      <div><span>Optimized</span><div class="bar"><i id="barOptimized"></i></div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>6. Dependency Graph Data</h2>
+    <div id="dependencies" class="results">Analyze code to see dependencies.</div>
+  </section>
+</main>
+
+<footer>
+  Advanced Python Project • Compiler-inspired static analysis and optimization
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

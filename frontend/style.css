@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+header {
+  padding: 28px 6%;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 { margin: 0 0 6px; }
+header p { margin: 0; opacity: .75; }
+.status { padding: 7px 12px; border-radius: 20px; background: #374151; }
+main { width: min(1200px, 92%); margin: 28px auto; }
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.07);
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+h2 { margin-top: 0; }
+textarea {
+  width: 100%;
+  min-height: 280px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  resize: vertical;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  margin-left: 6px;
+}
+button.secondary { background: #6b7280; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.results { line-height: 1.7; }
+.metric {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+.good { color: #15803d; font-weight: bold; }
+.warn { color: #b45309; font-weight: bold; }
+.code-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+pre {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 180px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.bars { margin-top: 20px; }
+.bar { background: #e5e7eb; height: 18px; border-radius: 10px; margin: 5px 0 14px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 5%; background: #2563eb; }
+footer { text-align: center; padding: 25px; color: #6b7280; }
+@media (max-width: 800px) {
+  .grid, .code-grid { grid-template-columns: 1fr; }
+  .section-title, header { align-items: flex-start; flex-direction: column; }
+  button { margin: 5px 0 0; }
+}
